@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Web 12</title>
+
+<!------------------------------------- Icons CDNJ Link ---------------------------------------->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+<!--------------------------------------- Website CSS ----------------------------------------->
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!----- Back To Top Button ----->
+	<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑</button>
+
+<!----- Navbar ----->
+	<nav>
+  		<div class="logo">MySite</div>
+
+  		<ul class="nav-links" id="nav-links">
+			<li><a href="#">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#gallery">Gallery</a></li>
+			<li><a href="#blog">Blog</a></li>
+			<li><a href="#pricing">Pricing</a></li>
+			<li><a href="#team">Team</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+
+  		<div class="hamburger" onclick="toggleMenu()">
+    		<div></div>
+    		<div></div>
+    		<div></div>
+  		</div>
+	</nav>
+
+
+<!----- Home Page ----->
+	<section class="hero">
+		<h1>Discover the Serenity</h1>
+		<p>Relax by the lake, breathe in the fresh air, and enjoy the moment.</p>
+
+		<div class="buttons">
+			<button class="btn btn-primary">Get Started</button>
+			<button class="btn btn-secondary" href="#about">Learn More</button>
+		</div>
+	</section>
+
+<!----- About Section ----->
+	<section class="side-feature-section fade-in">
+		<div class="side-feature-box">
+			<i class="fas fa-clock"></i>
+			<h3>Fast Booking</h3>
+			<p>Book your stay in seconds with our smooth online system.</p>
+		</div>
+
+		<div class="side-feature-box">
+			<i class="fas fa-leaf"></i>
+			<h3>Eco Tours</h3>
+			<p>Explore nature responsibly with guided eco-friendly adventures.</p>
+		</div>
+
+		<div class="side-feature-box">
+			<i class="fas fa-wallet"></i>
+			<h3>Affordable</h3>
+			<p>Get premium experiences at budget-friendly rates.</p>
+		</div>
+
+		<div class="side-feature-box">
+			<i class="fas fa-headset"></i>
+			<h3>24/7 Support</h3>
+			<p>We're always here to help — anytime, anywhere.</p>
+		</div>
+	</section>
+
+	<section class="clean-features-section fade-in" id="about">
+		<h2 class="main-heading">Our Exclusive Offerings</h2>
+
+		<div class="features-grid-clean">
+			<div class="feature-item-clean">
+				<i class="fas fa-ship"></i>
+				<h3>Lake Cruises</h3>
+				<p>Relax on serene water with our guided lake cruises.</p>
+			</div>
+
+			<div class="feature-item-clean">
+				<i class="fas fa-hiking"></i>
+				<h3>Mountain Hikes</h3>
+				<p>Challenge yourself with scenic hiking adventures.</p>
+			</div>
+
+			<div class="feature-item-clean">
+				<i class="fas fa-fire"></i>
+				<h3>Campfires</h3>
+				<p>Enjoy evenings under the stars with cozy campfires.</p>
+			</div>
+
+			<div class="feature-item-clean">
+				<i class="fas fa-swimmer"></i>
+				<h3>Swimming Spots</h3>
+				<p>Take a refreshing dip in clean, safe lake areas.</p>
+			</div>
+
+			<div class="feature-item-clean">
+				<i class="fas fa-camera-retro"></i>
+				<h3>Photo Tours</h3>
+				<p>Capture breathtaking moments with guided tours.</p>
+			</div>
+
+			<div class="feature-item-clean">
+				<i class="fas fa-bicycle"></i>
+				<h3>Bike Rentals</h3>
+				<p>Explore trails with our easy-access bike rentals.</p>
+			</div>
+
+			<div class="feature-item-clean">
+				<i class="fas fa-fish"></i>
+				<h3>Fishing</h3>
+				<p>Catch and release with our eco-friendly fishing spots.</p>
+			</div>
+
+			<div class="feature-item-clean">
+				<i class="fas fa-tree"></i>
+				<h3>Nature Walks</h3>
+				<p>Experience peaceful guided forest walks.</p>
+			</div>
+
+			<div class="feature-item-clean">
+				<i class="fas fa-map-marked-alt"></i>
+				<h3>Guided Tours</h3>
+				<p>Discover hidden gems with our expert guides.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="feature-bg-section fade-in">
+		<div class="scale-bar"></div>
+
+		<div class="feature-content">
+			<h1>Explore the Lake</h1>
+		    <p>Discover adventures on the water and beyond.</p>
+		</div>
+	</section>
+
+<!----- Gallery Section ----->
+	<section class="collapsible-gallery-section fade-in" id="gallery">
+	    <h2 class="gallery-heading">Photo Gallery</h2>
+
+	  <!-- Visible Images -->
+		<div class="gallery-grid">
+			<img src="https://picsum.photos/id/1015/400/300" alt="Gallery 1" />
+			<img src="https://picsum.photos/id/1016/400/300" alt="Gallery 2" />
+			<img src="https://picsum.photos/id/1018/400/300" alt="Gallery 3" />
+		</div>
+
+	  <!-- Hidden Images (initially collapsed) -->
+		<div class="gallery-grid hidden-gallery" id="hiddenGallery">
+			<img src="https://picsum.photos/id/1019/400/300" alt="Gallery 4" />
+			<img src="https://picsum.photos/id/1020/400/300" alt="Gallery 5" />
+			<img src="https://picsum.photos/id/1021/400/300" alt="Gallery 6" />
+			<img src="https://picsum.photos/id/1022/400/300" alt="Gallery 7" />
+			<img src="https://picsum.photos/id/1023/400/300" alt="Gallery 8" />
+			<img src="https://picsum.photos/id/1024/400/300" alt="Gallery 9" />
+		</div>
+
+	    <button class="toggle-btn" onclick="toggleGallery()">Show More</button>
+	</section>
+
+<!----- Newsletters Area ----->
+	<section class="newsletter-section fade-in">
+		<div class="newsletter-overlay">
+			<div class="newsletter-content">
+			    <h2>Subscribe to Our Nature Travel Newsletter</h2>
+			    <p>Get the latest updates, tips, and exclusive offers delivered to your inbox.</p>
+
+			    <form class="newsletter-form" action="#" method="POST">
+				    <input
+				      type="email"
+				      name="email"
+				      placeholder="Enter your email"
+				      required
+				      aria-label="Email Address"
+				    />
+			    	<button type="submit">Subscribe</button>
+			  </form>
+			</div>
+		</div>
+	</section>
+
+<!----- Blog Area ----->
+	<section class="blog-news-section fade-in" id="blog">
+  		<h2>Blog & News</h2>
+  		<div class="blog-news-grid">
+    		<div class="blog-post-card">
+      			<img src="https://picsum.photos/id/1050/600/300" alt="Blog 1">
+      			<div class="blog-post-content">
+			        <h3>Top 5 Nature Escapes This Summer</h3>
+			        <p>Discover hidden gems and breathtaking spots perfect for your next outdoor adventure.</p>
+			        <a href="#">Read More &rarr;</a>
+      			</div>
+    		</div>
+
+		    <div class="blog-post-card">
+		      	<img src="https://picsum.photos/id/1065/600/300" alt="Blog 2">
+		      	<div class="blog-post-content">
+		        	<h3>How to Pack Light for a Weekend Hike</h3>
+		        	<p>Learn the essentials to bring on your next trip without overpacking or forgetting key items.</p>
+		        	<a href="#">Read More &rarr;</a>
+		      	</div>
+    		</div>
+
+		    <div class="blog-post-card">
+		      	<img src="https://picsum.photos/id/1070/600/300" alt="Blog 3">
+		      	<div class="blog-post-content">
+		        	<h3>The Benefits of Digital Detox in Nature</h3>
+		        	<p>Unplug, unwind, and reconnect with yourself surrounded by the beauty of the natural world.</p>
+		        	<a href="#">Read More &rarr;</a>
+		      	</div>
+		    </div>
+  		</div>
+	</section>
+
+<!----- Testimonials Page ----->
+	<section class="testimonial-section fade-in">
+    	<h2>What Our Customers Say</h2>
+
+    	<div class="slider-wrapper">
+      		<div class="slider" id="testimonialSlider">
+        	<!-- Testimonial 1 -->
+		        <div class="testimonial-card">
+		          	<img src="https://randomuser.me/api/portraits/women/10.jpg" class="testimonial-photo" alt="Customer">
+		          	<div class="testimonial-name">Alice</div>
+		          	<div class="testimonial-feedback">"Outstanding service and quality work!"</div>
+		        </div>
+
+	        <!-- Testimonial 2 -->
+		        <div class="testimonial-card">
+		          	<img src="https://randomuser.me/api/portraits/men/12.jpg" class="testimonial-photo" alt="Customer">
+		          	<div class="testimonial-name">Bob</div>
+		          	<div class="testimonial-feedback">"Super fast support and friendly team."</div>
+		        </div>
+
+	        <!-- Testimonial 3 -->
+		        <div class="testimonial-card">
+		          	<img src="https://randomuser.me/api/portraits/women/34.jpg" class="testimonial-photo" alt="Customer">
+		          	<div class="testimonial-name">Clara</div>
+		          	<div class="testimonial-feedback">"They truly care about their customers."</div>
+		        </div>
+
+	        <!-- Testimonial 4 -->
+		        <div class="testimonial-card">
+		          	<img src="https://randomuser.me/api/portraits/men/45.jpg" class="testimonial-photo" alt="Customer">
+		          	<div class="testimonial-name">David</div>
+		          	<div class="testimonial-feedback">"Delivered more than I expected!"</div>
+		        </div>
+
+	        <!-- Testimonial 5 -->
+		        <div class="testimonial-card">
+		          	<img src="https://randomuser.me/api/portraits/women/55.jpg" class="testimonial-photo" alt="Customer">
+		          	<div class="testimonial-name">Emma</div>
+		          	<div class="testimonial-feedback">"Absolutely worth it. Highly recommended!"</div>
+		        </div>
+
+	        <!-- Testimonial 6 -->
+		        <div class="testimonial-card">
+		          	<img src="https://randomuser.me/api/portraits/men/22.jpg" class="testimonial-photo" alt="Customer">
+		          	<div class="testimonial-name">Frank</div>
+		          	<div class="testimonial-feedback">"They made everything easy and smooth."</div>
+		        </div>
+
+	        <!-- Testimonial 7 -->
+		        <div class="testimonial-card">
+		          	<img src="https://randomuser.me/api/portraits/women/66.jpg" class="testimonial-photo" alt="Customer">
+		          	<div class="testimonial-name">Grace</div>
+		          	<div class="testimonial-feedback">"Very professional and prompt."</div>
+		        </div>
+
+	        <!-- Testimonial 8 -->
+		        <div class="testimonial-card">
+		          	<img src="https://randomuser.me/api/portraits/men/77.jpg" class="testimonial-photo" alt="Customer">
+		          	<div class="testimonial-name">Henry</div>
+		          	<div class="testimonial-feedback">"Fantastic experience from start to end."</div>
+		        </div>
+
+	        <!-- Testimonial 9 -->
+		        <div class="testimonial-card">
+		          	<img src="https://randomuser.me/api/portraits/women/88.jpg" class="testimonial-photo" alt="Customer">
+		          	<div class="testimonial-name">Isla</div>
+		          	<div class="testimonial-feedback">"Will definitely work with them again!"</div>
+		        </div>
+
+	        <!-- Testimonial 10 -->
+		        <div class="testimonial-card">
+		          	<img src="https://randomuser.me/api/portraits/men/99.jpg" class="testimonial-photo" alt="Customer">
+		          	<div class="testimonial-name">Jack</div>
+		          	<div class="testimonial-feedback">"Truly top-notch results and service."</div>
+		        </div>
+      		</div>
+    	</div>
+
+    	<div class="nav-btns">
+      		<button onclick="scrollSlider(-1)">‹ Prev</button>
+      		<button onclick="scrollSlider(1)">Next ›</button>
+    	</div>
+  	</section>
+
+<!----- Pricing Page ----->
+  	<section class="pricing-section fade-in" id="pricing">
+    	<h2>Choose Your Adventure</h2>
+
+    	<div class="pricing-grid">
+      	<!-- Plan 1 -->
+		    <div class="pricing-card">
+		        <div class="plan-name">Mountain Escape</div>
+		        <div class="plan-price">$299</div>
+			        <ul class="plan-features">
+			          	<li>3 Days / 2 Nights</li>
+			          	<li>Guided Hiking Tours</li>
+			          	<li>Campfire Meals</li>
+			          	<li>Mountain Lodge Stay</li>
+			        </ul>
+		        <button class="plan-button">Book Now</button>
+		    </div>
+
+	    <!-- Plan 2 -->
+	      	<div class="pricing-card">
+		        <div class="plan-name">Tropical Getaway</div>
+		        <div class="plan-price">$499</div>
+			        <ul class="plan-features">
+			          	<li>5 Days / 4 Nights</li>
+			          	<li>Island Snorkeling</li>
+			          	<li>Beach Resort</li>
+			          	<li>All Meals Included</li>
+			        </ul>
+		        <button class="plan-button">Book Now</button>
+	      	</div>
+
+	      <!-- Plan 3 -->
+		    <div class="pricing-card">
+		        <div class="plan-name">Forest Retreat</div>
+		        <div class="plan-price">$399</div>
+			        <ul class="plan-features">
+			          	<li>4 Days / 3 Nights</li>
+			          	<li>Eco Cabin Stay</li>
+			          	<li>Wildlife Safari</li>
+			          	<li>Nature Workshops</li>
+			        </ul>
+		        <button class="plan-button">Book Now</button>
+		    </div>
+
+	      <!-- Plan 4 -->
+	      	<div class="pricing-card">
+		        <div class="plan-name">Adventure Combo</div>
+		        <div class="plan-price">$699</div>
+			        <ul class="plan-features">
+			          	<li>7 Days / 6 Nights</li>
+			          	<li>Rafting + Trekking</li>
+			          	<li>Multi-location Tour</li>
+			          	<li>Luxury Camping</li>
+			        </ul>
+		        <button class="plan-button">Book Now</button>
+	      	</div>
+    	</div>
+  	</section>
+
+<!----- Team Page ----->
+  	<section class="team-section fade-in" id="team">
+    	<h2>Meet Our Travel Experts</h2>
+
+	    <div class="team-grid">
+		    <div class="team-card">
+		        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Team Member" class="team-photo" />
+		        <div class="team-name">Emma Green</div>
+		        <div class="team-role">Nature Guide</div>
+		    </div>
+
+	      	<div class="team-card">
+	        	<img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member" class="team-photo" />
+	        	<div class="team-name">Liam Woods</div>
+	        	<div class="team-role">Adventure Planner</div>
+	      	</div>
+
+	      	<div class="team-card">
+	        	<img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Team Member" class="team-photo" />
+	        	<div class="team-name">Sophia Lake</div>
+	        	<div class="team-role">Trip Coordinator</div>
+	      	</div>
+
+	      	<div class="team-card">
+	        	<img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Team Member" class="team-photo" />
+	        	<div class="team-name">Noah Cliff</div>
+	        	<div class="team-role">Travel Consultant</div>
+	      	</div>
+	    </div>
+  	</section>
+
+<!----- Contact Page ----->
+  	<section class="contact-section" id="contact">
+	    <form class="contact-form" action="#" method="post">
+	      	<h2>Contact Us</h2>
+	      		<label for="name">Name</label>
+	      		<input type="text" id="name" name="name" placeholder="Your full name" required />
+
+	      		<label for="email">Email</label>
+	      		<input type="email" id="email" name="email" placeholder="Your email address" required />
+
+	      		<label for="message">Message</label>
+	      		<textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+
+	      	<button type="submit">Send Message</button>
+	    </form>
+
+    	<div class="map-container">
+	      	<iframe 
+	       		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019926593312!2d-122.41941528468113!3d37.774929779759056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085818b6d35ebfb%3A0xc77f5e7f511fbb2c!2sSan%20Francisco%20City%20Hall!5e0!3m2!1sen!2sus!4v1685357147648!5m2!1sen!2sus" 
+	        	allowfullscreen="" 
+	        	loading="lazy" 
+	        	referrerpolicy="no-referrer-when-downgrade"
+	        	title="Company Location">
+	      	</iframe>
+    	</div>
+  	</section>
+
+<!----- Footer Area ----->
+   	<footer>
+	    <div class="footer-container">
+	    <!-- About -->
+	      	<div class="footer-about">
+	        	<h3>TravelCo</h3>
+	        	<p>Your trusted partner for unforgettable nature adventures and tours. Explore the world with us!</p>
+	      	</div>
+
+	    <!-- Quick Links -->
+	      	<div class="footer-links">
+	        	<h4>Quick Links</h4>
+	        	<ul>
+	          		<li><a href="#">Home</a></li>
+	          		<li><a href="#">About Us</a></li>
+	          		<li><a href="#">Services</a></li>
+	          		<li><a href="#">Pricing</a></li>
+	          		<li><a href="#">Contact</a></li>
+	        	</ul>
+	      	</div>
+
+	    <!-- Social Media -->
+	      	<div class="footer-social">
+	        	<h4 style="width: 100%; text-align: left; color: #00ff6a; margin-bottom: 15px;">Follow Us</h4>
+
+	        	<a href="#" aria-label="Facebook" title="Facebook">
+	          		<i class="fab fa-facebook-f"></i>
+	          	</a>
+
+	        	<a href="#" aria-label="Twitter" title="Twitter">
+	          		<i class="fab fa-twitter"></i>
+	          	</a>
+
+	        	<a href="#" aria-label="Instagram" title="Instagram">
+	         		<i class="fab fa-instagram"></i>
+	        	</a>
+
+	        	<a href="#" aria-label="LinkedIn" title="LinkedIn">
+	          		<i class="fab fa-linkedin-in"></i>
+	        	</a>
+	      	</div>
+	    </div>
+  	</footer>
+
+  	<div class="copyright-container">
+        &copy; <span id="year"></span> This Website Design and Developed by Mr. Rahman | All rights reserved.
+        <br>
+        <a href="/privacy-policy">Privacy Policy</a> |
+        <a href="/terms-of-service">Terms of Service</a>
+    </div>
+
+
+<!----- Website Javascript ----->
+    <script src="script.js"></script>
+
+</body>
+</html>
